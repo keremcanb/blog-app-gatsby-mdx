@@ -1,19 +1,14 @@
-import React from "react"
-import Highlight, { defaultProps } from "prism-react-renderer"
-import theme from "prism-react-renderer/themes/vsDark"
-import styled from "styled-components"
+import React from 'react';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import theme from 'prism-react-renderer/themes/vsDark';
+import styled from 'styled-components';
 
-const PrismWrapper = props => {
-  const className = props.children.props.className
-  const language = className.split("-")[1]
+const PrismWrapper = (props) => {
+  const { className } = props.children.props;
+  const language = className.split('-')[1];
 
   return (
-    <Highlight
-      {...defaultProps}
-      code={props.children.props.children.trim()}
-      language={language}
-      theme={theme}
-    >
+    <Highlight {...defaultProps} code={props.children.props.children.trim()} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => {
         return (
           <Container>
@@ -28,11 +23,11 @@ const PrismWrapper = props => {
               ))}
             </Pre>
           </Container>
-        )
+        );
       }}
     </Highlight>
-  )
-}
+  );
+};
 // Styling Only
 const Pre = styled.pre`
   background: #1e1e1e;
@@ -40,7 +35,7 @@ const Pre = styled.pre`
   border-radius: var(--radius);
   margin: 3rem 0;
   font-size: 0.9rem;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   overflow-x: scroll;
   .token-line {
     line-height: 1.5;
@@ -59,9 +54,9 @@ const Pre = styled.pre`
     border-top-right-radius: var(--radius);
     background: #1e1e1e;
   }
-`
+`;
 const Container = styled.article`
   position: relative;
-`
+`;
 
-export default PrismWrapper
+export default PrismWrapper;

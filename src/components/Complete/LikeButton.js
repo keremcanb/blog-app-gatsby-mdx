@@ -1,8 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import { AiOutlineLike } from "react-icons/ai"
+import React from 'react';
+import styled from 'styled-components';
+import { AiOutlineLike } from 'react-icons/ai';
+
 const LikeButton = () => {
-  const [value, setValue] = React.useState(0)
+  const [value, setValue] = React.useState(0);
   return (
     <Wrapper>
       <div>
@@ -17,8 +18,8 @@ const LikeButton = () => {
       </div>
       <span>+{value}</span>
     </Wrapper>
-  )
-}
+  );
+};
 
 // Styling Only
 
@@ -46,5 +47,5 @@ const Wrapper = styled.div`
     color: var(--clr-primary-5);
     font-weight: 700;
   }
-`
-export default LikeButton
+`;
+export default LikeButton;

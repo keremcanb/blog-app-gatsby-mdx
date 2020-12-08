@@ -1,11 +1,11 @@
-import React from "react"
-import { FiInfo } from "react-icons/fi"
-import { TiWarningOutline } from "react-icons/ti"
-import { GoQuote } from "react-icons/go"
-import styled from "styled-components"
+import React from 'react';
+import { FiInfo } from 'react-icons/fi';
+import { TiWarningOutline } from 'react-icons/ti';
+import { GoQuote } from 'react-icons/go';
+import styled from 'styled-components';
 
 const Blockquote = ({ children, display }) => {
-  if (display === "warning")
+  if (display === 'warning')
     return (
       <Wrapper>
         <div className="container warning">
@@ -13,8 +13,8 @@ const Blockquote = ({ children, display }) => {
           {children}
         </div>
       </Wrapper>
-    )
-  if (display === "info")
+    );
+  if (display === 'info')
     return (
       <Wrapper>
         <div className="container info">
@@ -22,24 +22,23 @@ const Blockquote = ({ children, display }) => {
           {children}
         </div>
       </Wrapper>
-    )
-  if (display === "default") {
+    );
+  if (display === 'default') {
     return (
       <Wrapper>
         <div className="container default">{children}</div>
       </Wrapper>
-    )
-  } else {
-    return (
-      <Wrapper>
-        <div className="quote">
-          <GoQuote className="quote-icon" />
-          {children}
-        </div>
-      </Wrapper>
-    )
+    );
   }
-}
+  return (
+    <Wrapper>
+      <div className="quote">
+        <GoQuote className="quote-icon" />
+        {children}
+      </div>
+    </Wrapper>
+  );
+};
 const Wrapper = styled.blockquote`
   .container {
     padding: 2rem 1.5rem;
@@ -101,5 +100,5 @@ const Wrapper = styled.blockquote`
       color: var(--clr-primary-5);
     }
   }
-`
-export default Blockquote
+`;
+export default Blockquote;

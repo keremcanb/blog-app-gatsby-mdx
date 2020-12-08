@@ -1,15 +1,15 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import Hero from '../components/Hero'
-import styled from 'styled-components'
-import Image from 'gatsby-image'
-import Banner from '../components/Banner'
-import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import React from 'react';
+import styled from 'styled-components';
+import Image from 'gatsby-image';
+import { graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import Banner from '../components/Banner';
+import Hero from '../components/Hero';
+import Layout from '../components/Layout/Layout';
 // ...GatsbyImageSharpFluid
 const PostTemplate = () => {
-  return <h2>post template</h2>
-}
+  return <h2>post template</h2>;
+};
 
 const Wrapper = styled.section`
   width: 85vw;
@@ -54,6 +54,6 @@ const Wrapper = styled.section`
       column-gap: 4rem;
     }
   }
-`
+`;
 
-export default PostTemplate
+export default PostTemplate;

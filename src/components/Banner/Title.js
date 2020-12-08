@@ -1,8 +1,9 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+
 const Title = ({ title }) => {
-  return <Wrapper>Banner Title</Wrapper>
-}
+  return <Wrapper>Banner Title</Wrapper>;
+};
 const Wrapper = styled.div`
   position: relative;
   text-align: center;
@@ -26,5 +27,5 @@ const Wrapper = styled.div`
     background: var(--clr-primary-5);
     z-index: -1;
   }
-`
-export default Title
+`;
+export default Title;

@@ -1,9 +1,8 @@
-import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { Link } from 'gatsby'
+import React from 'react';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 
 const Categories = () => {
-  return <h3>categories component</h3>
-}
+  return <h3>categories component</h3>;
+};
 
-export default Categories
+export default Categories;

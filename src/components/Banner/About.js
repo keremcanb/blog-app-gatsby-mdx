@@ -1,14 +1,14 @@
-import React from 'react'
-import SocialLinks from '../../constants/socialLinks'
-import Image from 'gatsby-image'
-import { graphql, useStaticQuery } from 'gatsby'
-import Title from './Title'
-import styled from 'styled-components'
-//...GatsbyImageSharpFixed
+import React from 'react';
+import Image from 'gatsby-image';
+import { graphql, useStaticQuery } from 'gatsby';
+import styled from 'styled-components';
+import Title from './Title';
+import SocialLinks from '../../constants/socialLinks';
+// ...GatsbyImageSharpFixed
 
 const About = () => {
-  return <Wrapper>Banner About</Wrapper>
-}
+  return <Wrapper>Banner About</Wrapper>;
+};
 
 const Wrapper = styled.div`
   text-align: center;
@@ -18,5 +18,5 @@ const Wrapper = styled.div`
   .img {
     border-radius: 50%;
   }
-`
-export default About
+`;
+export default About;

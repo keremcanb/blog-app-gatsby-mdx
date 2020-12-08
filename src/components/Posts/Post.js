@@ -1,13 +1,13 @@
-import React from 'react'
-import Image from 'gatsby-image'
-import { FaRegClock } from 'react-icons/fa'
-import { IoMdArrowRoundForward } from 'react-icons/io'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
+import React from 'react';
+import Image from 'gatsby-image';
+import { FaRegClock } from 'react-icons/fa';
+import { IoMdArrowRoundForward } from 'react-icons/io';
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
 const Post = () => {
-  return <Wrapper>Post Component</Wrapper>
-}
+  return <Wrapper>Post Component</Wrapper>;
+};
 
 const Wrapper = styled.article`
   margin-bottom: 3rem;
@@ -109,6 +109,6 @@ const Wrapper = styled.article`
       }
     }
   }
-`
+`;
 
-export default Post
+export default Post;

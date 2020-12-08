@@ -1,8 +1,9 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import { Link } from 'gatsby'
-const Success = () => {
-  return <h2>success page</h2>
-}
+import React from 'react';
+import { Link } from 'gatsby';
+import Layout from '../components/Layout/Layout';
 
-export default Success
+const Success = () => {
+  return <h2>success page</h2>;
+};
+
+export default Success;

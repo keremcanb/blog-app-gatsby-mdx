@@ -1,14 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
-import { graphql, useStaticQuery } from 'gatsby'
-import { Link } from 'gatsby'
-import Image from 'gatsby-image'
-import Title from './Title'
+import React from 'react';
+import styled from 'styled-components';
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import Image from 'gatsby-image';
+import Title from './Title';
 // ...GatsbyImageSharpFluid
 
 const Recent = () => {
-  return <Wrapper>Banner Recent</Wrapper>
-}
+  return <Wrapper>Banner Recent</Wrapper>;
+};
 
 const Wrapper = styled.div`
   .post {
@@ -37,6 +36,6 @@ const Wrapper = styled.div`
       color: var(--clr-primary-5);
     }
   }
-`
+`;
 
-export default Recent
+export default Recent;

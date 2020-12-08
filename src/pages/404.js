@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Layout from '../components/Layout'
+import React from 'react';
+import { Link } from 'gatsby';
+import Layout from '../components/Layout/Layout';
 
-const NotFoundPage = () => <h2>error page</h2>
+const NotFoundPage = () => <h2>error page</h2>;
 
-export default NotFoundPage
+export default NotFoundPage;

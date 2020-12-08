@@ -8,15 +8,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `assets`,
-        path: `${__dirname}/src/assets`,
-      },
+        path: `${__dirname}/src/assets`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/posts`,
-      },
+        path: `${__dirname}/src/posts`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -29,8 +29,8 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `gatsbyjs`,
-      },
+        username: `gatsbyjs`
+      }
     },
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
@@ -38,13 +38,13 @@ module.exports = {
         fonts: [
           {
             family: `Roboto`,
-            variants: [`400`, `500`, `700`],
+            variants: [`400`, `500`, `700`]
           },
           {
-            family: `Open Sans`,
-          },
-        ],
-      },
-    },
-  ],
-}
+            family: `Open Sans`
+          }
+        ]
+      }
+    }
+  ]
+};
