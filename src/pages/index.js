@@ -5,6 +5,6 @@ import Layout from '../components/Layout/Layout';
 import Posts from '../components/Posts';
 import SEO from '../components/SEO';
 // ...GatsbyImageSharpFluid
-const IndexPage = () => <h2>home page</h2>;
+const IndexPage = () => <Layout />;
 
 export default IndexPage;
