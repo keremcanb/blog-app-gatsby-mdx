@@ -1,27 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { AiOutlineLike } from 'react-icons/ai';
 
 const LikeButton = () => {
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = useState(0);
+
   return (
     <Wrapper>
       <div>
         <button onClick={() => setValue(value + 1)}>
           <AiOutlineLike />
         </button>
+
         <p>
           Liked the post?
           <br />
           Click thumbs up few times
         </p>
       </div>
+
       <span>+{value}</span>
     </Wrapper>
   );
 };
-
-// Styling Only
 
 const Wrapper = styled.div`
   margin: 2rem 0;
@@ -48,4 +49,5 @@ const Wrapper = styled.div`
     font-weight: 700;
   }
 `;
+
 export default LikeButton;

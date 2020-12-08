@@ -31,7 +31,7 @@ const PrismWrapper = (props) => {
     </Highlight>
   );
 };
-// Styling Only
+
 const Pre = styled.pre`
   background: #1e1e1e;
   padding: 1rem 1.5rem;
@@ -58,6 +58,7 @@ const Pre = styled.pre`
     background: #1e1e1e;
   }
 `;
+
 const Container = styled.article`
   position: relative;
 `;

@@ -21,6 +21,7 @@ const myH2 = ({ children, title }) => {
     </h2>
   );
 };
+
 const HeadingTwo = styled.div`
   margin: 2rem 0;
   .underline {
@@ -29,6 +30,7 @@ const HeadingTwo = styled.div`
     background: var(--clr-primary-5);
   }
 `;
+
 const myH4 = (props) => (
   <h3 style={{ margin: '2rem 0', color: 'var(--clr-primary-5)' }}>
     {props.children}

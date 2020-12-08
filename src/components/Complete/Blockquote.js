@@ -39,6 +39,7 @@ const Blockquote = ({ children, display }) => {
     </Wrapper>
   );
 };
+
 const Wrapper = styled.blockquote`
   .container {
     padding: 2rem 1.5rem;

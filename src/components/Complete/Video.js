@@ -41,6 +41,7 @@ const RegVideoWrapper = styled.div`
     object-fit: cover;
   }
 `;
+
 const IframeVideoWrapper = styled.div`
   width: 90vw;
   max-width: 700px;
