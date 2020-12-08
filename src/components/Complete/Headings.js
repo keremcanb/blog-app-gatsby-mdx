@@ -29,8 +29,10 @@ const HeadingTwo = styled.div`
     background: var(--clr-primary-5);
   }
 `;
-const myH4 = (props) => {
-  return <h3 style={{ margin: '2rem 0', color: 'var(--clr-primary-5)' }}>{props.children}</h3>;
-};
+const myH4 = (props) => (
+  <h3 style={{ margin: '2rem 0', color: 'var(--clr-primary-5)' }}>
+    {props.children}
+  </h3>
+);
 
 export { myH2, myH4 };

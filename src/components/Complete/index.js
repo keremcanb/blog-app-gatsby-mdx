@@ -6,4 +6,13 @@ import Code from './Code';
 import Blockquote from './Blockquote';
 import PrismSetup from './PrismSetup';
 
-export { Counter, LikeButton, RegVideo, Video, Headings, Code, Blockquote, PrismSetup };
+export {
+  Counter,
+  LikeButton,
+  RegVideo,
+  Video,
+  Headings,
+  Code,
+  Blockquote,
+  PrismSetup
+};

@@ -8,23 +8,26 @@ const PrismWrapper = (props) => {
   const language = className.split('-')[1];
 
   return (
-    <Highlight {...defaultProps} code={props.children.props.children.trim()} language={language} theme={theme}>
-      {({ className, style, tokens, getLineProps, getTokenProps }) => {
-        return (
-          <Container>
-            <Pre className={className} style={style}>
-              <div className="code-tab">{language}</div>
-              {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
-                  {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              ))}
-            </Pre>
-          </Container>
-        );
-      }}
+    <Highlight
+      {...defaultProps}
+      code={props.children.props.children.trim()}
+      language={language}
+      theme={theme}
+    >
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <Container>
+          <Pre className={className} style={style}>
+            <div className="code-tab">{language}</div>
+            {tokens.map((line, i) => (
+              <div {...getLineProps({ line, key: i })}>
+                {line.map((token, key) => (
+                  <span {...getTokenProps({ token, key })} />
+                ))}
+              </div>
+            ))}
+          </Pre>
+        </Container>
+      )}
     </Highlight>
   );
 };
