@@ -4,8 +4,46 @@ import Layout from '../components/Layout/Layout';
 import Hero from '../components/Hero';
 import Posts from '../components/Posts';
 
-const CategoryTemplate = () => {
-  return <h2>categories template</h2>;
+export const query = graphql`
+  query MyQuery($category: String!) {
+    categories: allMdx(
+      filter: { frontmatter: { category: { eq: $category } } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          category
+          readTime
+          date(formatString: "MMMM Do, YYYY")
+          slug
+          image {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        excerpt
+        id
+      }
+    }
+  }
+`;
+
+const CategoryTemplate = ({
+  pageContext: { category },
+  data: {
+    categories: { nodes: posts }
+  }
+}) => {
+  return (
+    <Layout>
+      <Hero />
+      <Posts posts={posts} title={`category / ${category}`} />
+    </Layout>
+  );
 };
 
 export default CategoryTemplate;
