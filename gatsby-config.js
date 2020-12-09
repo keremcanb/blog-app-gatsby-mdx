@@ -4,6 +4,8 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-remark-images`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,33 +20,24 @@ module.exports = {
         path: `${__dirname}/src/posts`
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `gatsby`
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Roboto\:400,500,700`, `Open Sans`],
+        display: 'swap'
+      }
+    }
     // {
     //   resolve: `gatsby-plugin-mdx`,
     //   options: {
     //     gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
     //   },
     // },
-    {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `gatsbyjs`
-      }
-    }
-    // {
-    //   resolve: `gatsby-plugin-prefetch-google-fonts`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: `Roboto`,
-    //         variants: [`400`, `500`, `700`]
-    //       },
-    //       {
-    //         family: `Open Sans`
-    //       }
-    //     ]
-    //   }
-    // }
   ]
 };

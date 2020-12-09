@@ -4,23 +4,10 @@ import Layout from '../components/Layout/Layout';
 import Hero from '../components/Hero';
 import Posts from '../components/Posts';
 
-const PostsPage = ({
-  data: {
-    allMdx: { nodes: posts }
-  }
-}) => (
-  <Layout>
-    <Hero />
-    <Posts posts={posts} title="all posts" />
-  </Layout>
-);
-
 export const query = graphql`
   {
     allMdx(sort: { fields: frontmatter___date, order: DESC }) {
       nodes {
-        excerpt
-        id
         frontmatter {
           title
           readTime
@@ -36,9 +23,22 @@ export const query = graphql`
             }
           }
         }
+        excerpt
+        id
       }
     }
   }
 `;
+
+const PostsPage = ({
+  data: {
+    allMdx: { nodes: posts }
+  }
+}) => (
+  <Layout>
+    <Hero />
+    <Posts posts={posts} title="all posts" />
+  </Layout>
+);
 
 export default PostsPage;

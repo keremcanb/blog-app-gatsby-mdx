@@ -6,7 +6,6 @@ import { Link } from 'gatsby';
 import { Wrapper } from './styles';
 
 const Post = ({
-  excerpt,
   frontmatter: {
     title,
     slug,
@@ -16,16 +15,17 @@ const Post = ({
     image: {
       childImageSharp: { fluid }
     }
-  }
+  },
+  excerpt
 }) => (
   <Wrapper>
     <Image fluid={fluid} className="img" />
 
     <div className="info">
-      <span className="category">{category}</span>
       <h3>{title}</h3>
       <div className="underline" />
       <p>{excerpt}</p>
+      <span className="category">{category}</span>
 
       <Link to={`/posts/${slug}`} className="link">
         Continue Reading <IoMdArrowRoundForward />
@@ -36,6 +36,7 @@ const Post = ({
           <FaRegClock className="icon" />
           {date}
         </span>
+
         <span>{readTime} min read</span>
       </footer>
     </div>

@@ -1,8 +1,10 @@
 import { FiInfo } from 'react-icons/fi';
 import { Counter, LikeButton, RegVideo, Video } from '../components/Complete';
 import { Link } from 'gatsby';
+import Layout from '../components/Layout/Layout';
 
-<section className="mdx-page">
+<Layout>
+  <section className="mdx-page">
 
 
 _I'm baby humblebrag neutra taiyaki af vice bespoke locavore fanny pack_ ramps vexillologist succulents. Normcore etsy pour-over adaptogen skateboard fashion axe, bushwick food truck beard lumbersexual master cleanse actually deep v. **Retro cardigan raw denim franzen kickstarter you probably haven't heard of them literally** aesthetic snackwave four dollar toast. Keffiyeh synth umami, helvetica yr flexitarian jean shorts banh mi cardigan leggings letterpress paleo intelligentsia narwhal.
@@ -13,7 +15,7 @@ _I'm baby humblebrag neutra taiyaki af vice bespoke locavore fanny pack_ ramps v
 
 ## More Examples
 
-<div className="code">
+  <div className="code">
 
 
 ```js
@@ -21,22 +23,26 @@ const firstName = 'john';
 const lastName = 'smith';
 ```
 
- </div>
+   </div>
 
 
-<div className="nice-text">
+  <div className="nice-text">
 
 
 ### Nice Text
+
+{' '}
 
 <FiInfo className='nice-text-icon'></FiInfo>
 
 I'm baby prism everyday carry post-ironic jean shorts venmo health goth, migas pok pok vape beard umami. Poutine plaid before they sold out cronut messenger bag, echo park hexagon tumblr +1 quinoa mumblecore paleo. Activated charcoal drinking vinegar VHS gentrify put a bird on it tousled.
 
-</div>
+  </div>
 
 
 ## React Components
+
+{' '}
 
 <Counter />
 
@@ -64,33 +70,51 @@ const LikeButton = () => {
 };
 ```
 
+{' '}
+
 <LikeButton />
 
 ## Videos
 
+{' '}
+
 <RegVideo />
 <Video />
 
+{' '}
+
 <h2>regular heading</h2>
 <h2 title> nice title </h2>
+
+{' '}
 
 <h4>inline code</h4>
 
 `console.log('hello there')`
 
+{' '}
+
 <h4> blockquote element </h4>
+
+{' '}
 
 <blockquote display='default'>
   I'm baby prism everyday carry post-ironic jean shorts venmo health goth, migas
 </blockquote>
 
+{' '}
+
 <blockquote display='info'>
   I'm baby prism everyday carry post-ironic jean shorts venmo health goth, migas
 </blockquote>
 
+{' '}
+
 <blockquote display='warning'>
   I'm baby prism everyday carry post-ironic jean shorts venmo health goth, migas
 </blockquote>
+
+{' '}
 
 <blockquote>
   I'm baby gluten-free lo-fi tumblr, bicycle rights edison bulb green juice
@@ -157,8 +181,11 @@ background: var(--clr-grey-10);
 text-align: center;
 ```
 
+{' '}
+
 <article>this is aside</article>
 
-<Link to="/posts" className="btn center-btn">all posts</Link>
-</section>
+  <Link to="/posts" className="btn center-btn">all posts</Link>
+  </section>
+</Layout>
 

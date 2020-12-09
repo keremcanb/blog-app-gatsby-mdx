@@ -8,17 +8,20 @@ const Links = ({ styleClass, children }) => (
         Home
       </Link>
     </li>
+
     <li>
       <Link to="/posts" className="page-link">
         Posts
       </Link>
       {children}
     </li>
+
     <li>
       <Link to="/newsletter" className="page-link">
         Newsletter
       </Link>
     </li>
+
     <li>
       <Link to="/post" className="page-link">
         Post
