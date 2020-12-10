@@ -4,7 +4,13 @@ import Title from './Title';
 import { BannerCategoriesWrapper } from './styles';
 
 const BannerCategories = () => {
-  return <BannerCategoriesWrapper>Banner Categories</BannerCategoriesWrapper>;
+  return (
+    <BannerCategoriesWrapper>
+      <Title title="Categories" />
+
+      <Categories />
+    </BannerCategoriesWrapper>
+  );
 };
 
 export default BannerCategories;

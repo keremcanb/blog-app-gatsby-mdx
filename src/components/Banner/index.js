@@ -6,7 +6,14 @@ import BannerCategories from './BannerCategories';
 import { Wrapper } from './styles';
 
 const Banner = () => {
-  return <Wrapper>Banner Component</Wrapper>;
+  return (
+    <Wrapper>
+      <About />
+      <Instagram />
+      <Recent />
+      <BannerCategories />
+    </Wrapper>
+  );
 };
 
 export default Banner;

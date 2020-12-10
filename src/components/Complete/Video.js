@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import video from '../../../../connect.mp4';
 // import video from '../../assets/connect.mp4';
 
 export const RegVideo = () => (
   <RegVideoWrapper>
     <video controls autoPlay muted loop>
-      {/* <source src={video} type="video/mp4" /> */}
+      <source src={video} type="video/mp4" />
     </video>
   </RegVideoWrapper>
 );
