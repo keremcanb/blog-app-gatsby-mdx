@@ -1,5 +1,12 @@
-/* eslint-disable no-useless-escape */
 module.exports = {
+  siteMetadata: {
+    title: `Gatsby MDX Blog`,
+    description: `Awesome Blog built with Gatsby and MDX`,
+    titleTemplate: `%s | MDX Blog`,
+    url: `https://gatsby-mdx-blog-course-project.netlify.app/`,
+    image: `mainImg.png`,
+    twitterUsername: `@keremcan`
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -44,6 +51,5 @@ module.exports = {
         gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }]
       }
     }
-    // `gatsby-plugin-mdx`,
   ]
 };

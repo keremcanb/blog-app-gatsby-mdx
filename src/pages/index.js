@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Hero from '../components/Hero';
 import Layout from '../components/Layout/Layout';
 import Posts from '../components/Posts';
-// import SEO from '../components/SEO';
+import SEO from '../components/SEO';
 
 export const query = graphql`
   {
@@ -36,7 +36,7 @@ const IndexPage = ({
   }
 }) => (
   <Layout>
-    {/* <SEO title="Home" /> */}
+    <SEO title="Home" />
     <Hero showPerson />
     <Posts posts={posts} title="Recently Published" />
   </Layout>
