@@ -102,3 +102,106 @@ export const Wrapper = styled.blockquote`
     }
   }
 `;
+
+export const CounterWrapper = styled.div`
+  max-width: 500px;
+  border-radius: var(--radius);
+  padding: 1rem 1.5rem;
+  background: var(--clr-grey-10);
+  text-align: center;
+  #value {
+    font-size: 6rem;
+    font-weight: bold;
+  }
+  .btn {
+    margin: 0.5rem;
+  }
+  .dec-btn {
+    background: var(--clr-red-dark);
+    color: var(--clr-white);
+  }
+  .dec-btn:hover {
+    background: var(--clr-red-light);
+    color: var(--clr-red-dark);
+  }
+  .inc-btn {
+    background: var(--clr-green-dark);
+    color: var(--clr-white);
+  }
+  .inc-btn:hover {
+    background: var(--clr-green-light);
+    color: var(--clr-green-dark);
+  }
+  .reset-btn {
+    background: var(--clr-black);
+    color: var(--clr-white);
+  }
+  .reset-btn:hover {
+    background: var(--clr-grey-5);
+    color: var(--clr-white);
+  }
+`;
+
+export const LikeWrapper = styled.div`
+  margin: 2rem 0;
+  div {
+    display: flex;
+    align-items: center;
+  }
+  button {
+    font-size: 3.5rem;
+    background: transparent;
+    border: transparent;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: var(--clr-primary-5);
+  }
+  p {
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  span {
+    font-size: 2rem;
+    color: var(--clr-primary-5);
+    font-weight: 700;
+  }
+`;
+
+export const RegVideoWrapper = styled.div`
+  width: 90vw;
+  max-width: 700px;
+  height: 30vh;
+  position: relative;
+  margin-bottom: 2rem;
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const IframeVideoWrapper = styled.div`
+  width: 90vw;
+  max-width: 700px;
+
+  .video {
+    overflow: hidden;
+    /* // Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625) */
+    padding-top: 56.25%;
+    position: relative;
+    border-radius: var(--radius);
+  }
+
+  .video iframe {
+    border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+`;

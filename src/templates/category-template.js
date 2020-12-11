@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 import Posts from '../components/Posts';
 
 export const query = graphql`
-  query MyQuery($category: String!) {
+  query Categories($category: String!) {
     categories: allMdx(
       filter: { frontmatter: { category: { eq: $category } } }
       sort: { fields: frontmatter___date, order: DESC }

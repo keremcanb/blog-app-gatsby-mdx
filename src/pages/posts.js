@@ -39,7 +39,7 @@ const PostsPage = ({
   <Layout>
     <SEO title="Posts" />
     <Hero />
-    <Posts posts={posts} title="all posts" />
+    <Posts posts={posts} title="All Posts" />
   </Layout>
 );
 

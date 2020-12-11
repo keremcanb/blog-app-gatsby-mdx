@@ -19,10 +19,9 @@ const Post = ({
   excerpt
 }) => (
   <Wrapper>
-    <Image fluid={fluid} className="img" />
-
     <div className="info">
       <h3>{title}</h3>
+      <Image fluid={fluid} className="img" />
       <div className="underline" />
       <p>{excerpt}</p>
       <span className="category">{category}</span>
