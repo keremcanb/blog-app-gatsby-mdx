@@ -37,13 +37,11 @@ const CategoryTemplate = ({
   data: {
     categories: { nodes: posts }
   }
-}) => {
-  return (
-    <Layout>
-      <Hero />
-      <Posts posts={posts} title={`category / ${category}`} />
-    </Layout>
-  );
-};
+}) => (
+  <Layout>
+    <Hero />
+    <Posts posts={posts} title={`category / ${category}`} />
+  </Layout>
+);
 
 export default CategoryTemplate;

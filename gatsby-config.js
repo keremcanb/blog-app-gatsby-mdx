@@ -1,9 +1,8 @@
+/* eslint-disable no-useless-escape */
 module.exports = {
   plugins: [
-    `gatsby-plugin-mdx`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    `gatsby-remark-images`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -21,6 +20,12 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 590
+      }
+    },
+    {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `nomadic_sith`
@@ -32,12 +37,13 @@ module.exports = {
         fonts: [`Roboto\:400,500,700`, `Open Sans`],
         display: 'swap'
       }
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }]
+      }
     }
-    // {
-    //   resolve: `gatsby-plugin-mdx`,
-    //   options: {
-    //     gatsbyRemarkPlugins: [{ resolve: 'gatsby-remark-images' }],
-    //   },
-    // },
+    // `gatsby-plugin-mdx`,
   ]
 };

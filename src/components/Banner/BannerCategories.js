@@ -3,14 +3,12 @@ import Categories from '../Categories';
 import Title from './Title';
 import { BannerCategoriesWrapper } from './styles';
 
-const BannerCategories = () => {
-  return (
-    <BannerCategoriesWrapper>
-      <Title title="Categories" />
+const BannerCategories = () => (
+  <BannerCategoriesWrapper>
+    <Title title="Categories" />
 
-      <Categories />
-    </BannerCategoriesWrapper>
-  );
-};
+    <Categories />
+  </BannerCategoriesWrapper>
+);
 
 export default BannerCategories;

@@ -1,16 +1,13 @@
 import React from 'react';
-import styled from 'styled-components';
+import { HeadingTwo } from './styles';
 
-const myH2 = ({ children, title }) => {
-  if (title) {
-    return (
-      <HeadingTwo>
-        <h2>{children}</h2>
-        <div className="underline" />
-      </HeadingTwo>
-    );
-  }
-  return (
+const myH2 = ({ children, title }) =>
+  title ? (
+    <HeadingTwo>
+      <h2>{children}</h2>
+      <div className="underline" />
+    </HeadingTwo>
+  ) : (
     <h2
       style={{
         margin: '2rem 0',
@@ -20,20 +17,10 @@ const myH2 = ({ children, title }) => {
       {children}
     </h2>
   );
-};
 
-const HeadingTwo = styled.div`
-  margin: 2rem 0;
-  .underline {
-    width: 5rem;
-    height: 5px;
-    background: var(--clr-primary-5);
-  }
-`;
-
-const myH4 = (props) => (
+const myH4 = ({ children }) => (
   <h3 style={{ margin: '2rem 0', color: 'var(--clr-primary-5)' }}>
-    {props.children}
+    {children}
   </h3>
 );
 

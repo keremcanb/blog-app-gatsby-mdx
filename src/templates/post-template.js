@@ -48,13 +48,11 @@ const PostTemplate = ({
 
     <Wrapper>
       <article>
-        <Image fluid={fluid} />
-
         <div className="post-info">
           <h2>{title}</h2>
           <p>{date}</p>
+          <Image fluid={fluid} />
           <span>{category}</span>
-          <div className="underline" />
         </div>
 
         <MDXRenderer>{body}</MDXRenderer>

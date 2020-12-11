@@ -16,15 +16,13 @@ const Categories = () => {
 
   return (
     <ul className="categories">
-      {distinct.map((category, index) => {
-        return (
-          <li key={index}>
-            <Link to={`/${category}`} className="category">
-              {category}
-            </Link>
-          </li>
-        );
-      })}
+      {distinct.map((category, index) => (
+        <li key={index}>
+          <Link to={`/${category}`} className="category">
+            {category}
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 };
